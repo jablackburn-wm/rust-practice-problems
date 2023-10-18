@@ -8,10 +8,23 @@ fn main() {
     let mut v = vec![1, 5, 2, 70];
 
     // median
+    
+    let mut median: f64;
+    let length = v.len();
         // sort
-        // get midpoint(s)
-        // calculate median
+    v.sort();
+        // get midpoint(s) and calculate median
+    if length % 2 == 0 {
+        median = (v[length / 2] + v[(length / 2) - 1]) as f64;
+        median = median / 2.0;
+    } else {
+        median = v[length / 2] as f64;
+    }
         // print median
+    println!("median is {}", median);
+
+
+
     // mode
         // init hashmap
         // iterate over vector like in listing 8-25 (official rust book)
